@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: micronaut-graal-demo
+  server:
+    port: 8080
