@@ -4,7 +4,7 @@ RUN gu install native-image
 COPY . /home/app/micronaut-graal-demo
 WORKDIR /home/app/micronaut-graal-demo
 
-RUN native-image --no-server --static -cp build/libs/micronaut-graal-demo-*-all.jar
+RUN native-image --no-server --enable-http --enable-https --enable-all-security-services --static -cp build/libs/micronaut-graal-demo-*-all.jar
 
 FROM scratch
 EXPOSE 8080
